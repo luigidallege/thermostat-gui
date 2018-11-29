@@ -95,7 +95,7 @@ button:active{
   background: #FFCD00;
 }  
 
-#toolbar{
+#toolbar-homepage{
   background: #202020;
   display: flex;
   width: 100%;
@@ -121,7 +121,7 @@ button:active{
   margin-top: 5px;
 } 
   
-#main{
+#main-homepage{
   display: flex;
   height: 70%;
 } 
@@ -237,4 +237,78 @@ button:active{
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #FFCD00;
+}
+
+/* Scheduler CSS */
+#main{
+  height: 70%;
+} 
+
+#toolbar{
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+#schedule-selecter-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}  
+
+#schedule-btn{
+  color: #FFF;
+  font-size: 12px;
+  padding: 0;
+  width: 113px;
+  height: 33px;
+  border-radius: 5px;
+  box-shadow: 1px 1px #000;
+}
+
+#label{
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+}  
+
+#custom-dial-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}  
+
+#button-container{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: -20px;
+}  
+
+#back-btn{
+  color: #FFF;
+  background: #808080;
+  font-size: 12px;
+  padding: 0;
+  margin: 10px;
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px #000;
+}  
+
+#next-btn{
+  color: #FFF;
+  background: #FFCD00;
+  font-size: 12px;
+  padding: 0;
+  margin: 10px;
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px #000;
 }
