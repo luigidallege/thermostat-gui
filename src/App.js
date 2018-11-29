@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import NavBar from './NavBar'
 
 class App extends Component {
   render() {
     return (
       <div id="screen">
-        <div id="toolbar">
-          <div id="date-time">
-            <h1>4:47 PM</h1>
-            <h1 id="date">Wed, Nov. 7th</h1>
-          </div>
-          <div id="nav">
-            <button>Cal</button>
-            <button>S</button>
-          </div>
-        </div>
-          
+        <NavBar></NavBar>
+
         <div id="main">
           <div id="hvac-control">
             <button id="hvac-button">Auto</button>

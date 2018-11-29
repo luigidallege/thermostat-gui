@@ -119,7 +119,13 @@ button:active{
   color: #FFCD00;
   display: block;
   margin-top: 5px;
-} 
+}
+
+#time{
+  color: #FFFFFF;
+  display: block;
+  margin-top: 5px;
+}
   
 #main{
   display: flex;
