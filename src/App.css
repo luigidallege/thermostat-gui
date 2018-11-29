@@ -31,6 +31,8 @@
   }
 }
 
+/* https://codepen.io/jpohlman/pen/RqeJGW */
+
 html, body{
   height: 100%;
 }
@@ -86,14 +88,43 @@ button:hover{
 button:focus{
   outline: none;
   border: none;
-  background: #FFCD00;
+  background: #FFF;
+  color: #000
 }
 
 button:active{
   outline: none;
   border: none;
+  background: #FFF;
+  color: #000
+} 
+
+#button{
+  background: #808080;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 3px 3px;
+}
+
+#button:hover{
+  outline: none;
+  border: none;
   background: #FFCD00;
-}  
+}
+
+#button:focus{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+}
+
+#button:active{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+} 
 
 #toolbar-homepage{
   background: #202020;
@@ -117,6 +148,12 @@ button:active{
 
 #date{
   color: #FFCD00;
+  display: block;
+  margin-top: 5px;
+} 
+
+#time{
+  color: #FFF;
   display: block;
   margin-top: 5px;
 } 
@@ -251,14 +288,17 @@ button:active{
   padding: 15px;
 }
 
+/* https://codepen.io/jpohlman/pen/LXgaOW */
+
 #schedule-selecter-container{
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  margin-top: 20px;
 }  
 
-#schedule-btn{
+.schedule-btn{
   color: #FFF;
   font-size: 12px;
   padding: 0;
@@ -267,6 +307,8 @@ button:active{
   border-radius: 5px;
   box-shadow: 1px 1px #000;
 }
+
+/* https://codepen.io/jpohlman/pen/MzPxdK?editors=0100 */
 
 #label{
   width: 100%;
@@ -289,7 +331,7 @@ button:active{
   bottom: -20px;
 }  
 
-#back-btn{
+.back-btn{
   color: #FFF;
   background: #808080;
   font-size: 12px;
@@ -301,6 +343,11 @@ button:active{
   box-shadow: 1px 1px #000;
 }  
 
+#enable-edit-containter{
+  display: flex;
+  justify-content: space-between;
+}
+
 #next-btn{
   color: #FFF;
   background: #FFCD00;
@@ -311,4 +358,31 @@ button:active{
   height: 30px;
   border-radius: 5px;
   box-shadow: 1px 1px #000;
+}
+
+/* https://codepen.io/jpohlman/pen/BGqEQX?editors=0110 */
+
+#button-container-set-temp{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 18%;
+}
+
+#adjust-container-scheduler{
+  flex: 15%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}  
+  
+#adjust-box-scheduler{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85%;
+  height: 133px;
+  margin-left: 20px;
+  border-radius: 10px 0 0 10px;
 }
