@@ -51,7 +51,7 @@ class Scheduler extends Component {
             <Button class="button">4</Button>
           </div>
 
-          <div id="schedule-selecter-container">
+          <div id="enable-edit-container">
             <FormGroup row>
               <FormControlLabel
                 control={
