@@ -22,6 +22,7 @@ export class Scheduler extends Component {
   constructor(props){
     super(props)
     this.state = {
+      showSetPoints: false,
       enableSetPoint: false,
       enableEditIsHidden: true,
       selectedSetPoint: '',
@@ -31,9 +32,11 @@ export class Scheduler extends Component {
     this.onSetPointClick = this.onSetPointClick.bind(this);
     this.enableSetPointOnClick = this.enableSetPointOnClick.bind(this);
   }
+
+
   
   onDaySelectionClick(name) {
-    this.setState({ selectedDay: name});
+    this.setState({ showSetPoints: true, selectedDay: name});
   } 
 
   onSetPointClick(name) {
@@ -53,15 +56,32 @@ export class Scheduler extends Component {
           <Button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekdays')} style={{backgroundColor: this.state.selectedDay === "Weekdays" ? "#FFCD00" : "#808080"}}>Weekdays</Button>
           <Button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekends')} style={{backgroundColor: this.state.selectedDay === "Weekends" ? "#FFCD00" : "#808080"}}>Weekends</Button>
         </div>
-        
-        <div id="schedule-selecter-container">
-          <Button class="button" onClick={() => this.onSetPointClick('1')} style={{backgroundColor: this.state.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
-          <Button class="button" onClick={() => this.onSetPointClick('2')} style={{backgroundColor: this.state.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
-          <Button class="button" onClick={() => this.onSetPointClick('3')} style={{backgroundColor: this.state.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
-          <Button class="button" onClick={() => this.onSetPointClick('4')} style={{backgroundColor: this.state.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</Button>
-        </div>
 
-        {this.state.enableEditIsHidden ? null : <EnableEdit selectedDay={this.props.selectedDay} selectedSetPoint={this.props.selectedSetPoint} classes={classes} enableSetPoint={this.state.enableSetPoint} enableSetPointOnClick={this.enableSetPointOnClick}/>}
+        {this.state.showSetPoints ? null : <SetPoints selectedDay={this.state.selectedDay} onSetPointClick={this.onSetPointClick} selectedSetPoint={this.state.selectedSetPoint}/>}      
+
+        {this.state.enableEditIsHidden ? null : <EnableEdit selectedDay={this.state.selectedDay} selectedSetPoint={this.state.selectedSetPoint} classes={classes} enableSetPoint={this.state.enableSetPoint} enableSetPointOnClick={this.enableSetPointOnClick}/>}
+      </div>
+    );
+  }
+}
+
+class SetPoints extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+
+    };
+  }
+
+  render() {    
+    const { classes } = this.props;
+
+    return(
+      <div id="schedule-selecter-container" isHidden={this.state.showSetPoints}>
+        <Button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.state.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.state.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.state.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('4')} style={{backgroundColor: this.state.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</Button>
       </div>
     );
   }
