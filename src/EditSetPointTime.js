@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
-import { UpArrow, DownArrow } from './Arrows'
 import { Typography } from '@material-ui/core'
 import { NavigatePages } from './NavigatePages'
+import { SelectTime } from './SelectTime'
 
 export class EditSetPointTime extends Component{
   constructor(props){
@@ -73,25 +73,7 @@ export class EditSetPointTime extends Component{
         <div id="main">
           <Typography id="label">Select Time</Typography>
           
-          <div id="custom-dial-container">
-            <div>
-                <UpArrow adjust={this.adjustHour}/>
-                <Typography id="dial-text">{this.state.hour}</Typography>
-                <DownArrow adjust={this.adjustHour}/>
-            </div>
-
-            <div>
-                <UpArrow adjust={this.adjustMinute}/>
-                <Typography id="dial-text">{this.state.minute < 10 ? '0' : ''}{this.state.minute}</Typography>
-                <DownArrow adjust={this.adjustMinute}/>
-            </div>
-
-            <div>
-                <UpArrow adjust={this.adjustAMPM}/>
-                <Typography id="dial-text">{this.state.ampm}</Typography>
-                <DownArrow adjust={this.adjustAMPM}/>
-            </div>
-          </div>
+          <SelectTime/>
         </div>
         <NavigatePages goBack={this.goBack} nextPage={'/editsetpointtemp'}/>
       </div>
