@@ -14,9 +14,9 @@ class NavBar extends Component {
           </div>
           <div id="nav">
             <Link to="/setpoints">
-              <DateRange fontSize="large"/>
+              <DateRange class="nav-btn" fontSize="large"/>
             </Link>
-            <Settings fontSize="large"/>
+            <Settings class="nav-btn" fontSize="large"/>
           </div>
         </Toolbar>
       </AppBar>
