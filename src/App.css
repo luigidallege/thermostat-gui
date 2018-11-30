@@ -31,6 +31,63 @@
   }
 }
 
+/* NavBar  */
+
+#toolbar-homepage{
+  background: #202020;
+  display: flex;
+  width: 100%;
+  height: 53px;
+  padding-top: 5px;
+  padding-left: 5px;
+} 
+
+#date-time{
+  flex: 50%;
+}  
+
+#nav{
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#date{
+  color: #FFCD00;
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  margin-left: 5px;
+} 
+
+#time{
+  color: #FFF;
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+#nav-btn{
+  background: #808080;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 3px 3px black;
+  color: white;
+}
+
+#nav-btn:hover{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+}
+
+/* https://codepen.io/jpohlman/pen/RqeJGW */
+
 html, body{
   height: 100%;
 }
@@ -74,7 +131,8 @@ button{
   height: 35px;
   border-radius: 100%;
   border: none;
-  box-shadow: 3px 3px;
+  box-shadow: 3px 3px black;
+  color: white;
 }
 
 button:hover{
@@ -86,40 +144,42 @@ button:hover{
 button:focus{
   outline: none;
   border: none;
-  background: #FFCD00;
+  background: #FFF;
 }
 
 button:active{
   outline: none;
   border: none;
-  background: #FFCD00;
-}  
-
-#toolbar-homepage{
-  background: #202020;
-  display: flex;
-  width: 100%;
-  height: 53px;
-  padding-top: 5px;
-  padding-left: 5px;
+  background: #FFF;
 } 
 
-#date-time{
-  flex: 50%;
-}  
-
-#nav{
-  flex: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+#button{
+  background: #808080;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 3px 3px;
 }
 
-#date{
-  color: #FFCD00;
-  display: block;
-  margin-top: 5px;
+#button:hover{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+}
+
+#button:focus{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+}
+
+#button:active{
+  outline: none;
+  border: none;
+  background: #FFCD00;
 } 
+ 
   
 #main-homepage{
   display: flex;
@@ -148,7 +208,15 @@ button:active{
 #curr-temp{
   color: #FFF;
   font-size:125px;
-  line-height: 118%;
+  line-height: 110%;
+  padding: 0;
+  margin: 0;
+}
+
+#scheduler-temp{
+  color: #FFF;
+  font-size:125px;
+  line-height: 110%;
   padding: 0;
   margin: 0;
 }
@@ -159,6 +227,9 @@ button:active{
   text-align: center;
   background: #4D4D4D;
   border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } 
 
 #hvac-status-id{
@@ -166,14 +237,12 @@ button:active{
   display: inline-block;
   padding-right: 10px;
   font-size: 14px;
-  padding-bottom: 20px;
 }  
 
 #hvac-status{
   color: #FFCD00;
   display: inline-block;
   font-size: 14px;
-  padding-bottom: 20px;
 }
 
 #adjust-container{
@@ -226,39 +295,49 @@ button:active{
 #arrow-up{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #FFCD00;
 }  
 
 #arrow-down{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #FFCD00;
 }
 
 /* Scheduler CSS */
 #main{
-  height: 70%;
+  height: 45%;
+} 
+
+#main-settemp{
+  display: flex;
+  height: 45%;
 } 
 
 #toolbar{
+  background: #000;
   display: flex;
   width: 100%;
-  height: auto;
-  padding: 15px;
+  height: 53px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
+
+/* https://codepen.io/jpohlman/pen/LXgaOW */
 
 #schedule-selecter-container{
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  margin-top: 20px;
 }  
 
-#schedule-btn{
+.schedule-btn{
   color: #FFF;
   font-size: 12px;
   padding: 0;
@@ -268,12 +347,15 @@ button:active{
   box-shadow: 1px 1px #000;
 }
 
+/* https://codepen.io/jpohlman/pen/MzPxdK?editors=0100 */
+
 #label{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: left;
   padding-left: 20px;
   font-size: 16px;
+  color: white;
 }  
 
 #custom-dial-container{
@@ -289,7 +371,7 @@ button:active{
   bottom: -20px;
 }  
 
-#back-btn{
+.back-btn{
   color: #FFF;
   background: #808080;
   font-size: 12px;
@@ -301,7 +383,13 @@ button:active{
   box-shadow: 1px 1px #000;
 }  
 
-#next-btn{
+#enable-edit-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+.next-btn{
   color: #FFF;
   background: #FFCD00;
   font-size: 12px;
@@ -312,3 +400,61 @@ button:active{
   border-radius: 5px;
   box-shadow: 1px 1px #000;
 }
+
+/* https://codepen.io/jpohlman/pen/BGqEQX?editors=0110 */
+
+#button-container-set-temp{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 18%;
+}
+
+#adjust-container-scheduler{
+  flex: 15%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}  
+  
+#adjust-box-scheduler{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85%;
+  height: 133px;
+  margin-left: 20px;
+  border-radius: 10px 0 0 10px;
+}
+
+#dial-text{
+  color: white;
+  font-size: 16px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#component-wrapper{
+  height: 100%;
+}
+
+#datetime-component-wrapper{
+  height: 100%;
+  position: relative;
+  top: -12%;
+}
+
+#datetime-label{
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+  color: white;
+}  
+
+  
+#main-datetime{
+  height:60%;
+} 
