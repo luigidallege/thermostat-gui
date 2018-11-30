@@ -65,7 +65,7 @@
   margin-top: 5px;
 }
 
-.nav-btn{
+#nav-btn{
   background: #808080;
   width: 35px;
   height: 35px;
@@ -76,7 +76,7 @@
   color: white;
 }
 
-.nav-btn:hover{
+#nav-btn:hover{
   outline: none;
   border: none;
   background: #FFCD00;
