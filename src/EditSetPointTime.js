@@ -69,29 +69,30 @@ export class EditSetPointTime extends Component{
   render() {   
 
     return(
-      <div id="main">
-        <Typography id="label">Select Time</Typography>
-        
-        <div id="custom-dial-container">
-          <div>
-              <UpArrow adjust={this.adjustHour}/>
-              <Typography id="dial-text">{this.state.hour}</Typography>
-              <DownArrow adjust={this.adjustHour}/>
-          </div>
+      <div id="component-wrapper">
+        <div id="main">
+          <Typography id="label">Select Time</Typography>
+          
+          <div id="custom-dial-container">
+            <div>
+                <UpArrow adjust={this.adjustHour}/>
+                <Typography id="dial-text">{this.state.hour}</Typography>
+                <DownArrow adjust={this.adjustHour}/>
+            </div>
 
-          <div>
-              <UpArrow adjust={this.adjustMinute}/>
-              <Typography id="dial-text">{this.state.minute < 10 ? '0' : ''}{this.state.minute}</Typography>
-              <DownArrow adjust={this.adjustMinute}/>
-          </div>
+            <div>
+                <UpArrow adjust={this.adjustMinute}/>
+                <Typography id="dial-text">{this.state.minute < 10 ? '0' : ''}{this.state.minute}</Typography>
+                <DownArrow adjust={this.adjustMinute}/>
+            </div>
 
-          <div>
-              <UpArrow adjust={this.adjustAMPM}/>
-              <Typography id="dial-text">{this.state.ampm}</Typography>
-              <DownArrow adjust={this.adjustAMPM}/>
+            <div>
+                <UpArrow adjust={this.adjustAMPM}/>
+                <Typography id="dial-text">{this.state.ampm}</Typography>
+                <DownArrow adjust={this.adjustAMPM}/>
+            </div>
           </div>
         </div>
-
         <NavigatePages goBack={this.goBack} nextPage={'/editsetpointtemp'}/>
       </div>
     );
