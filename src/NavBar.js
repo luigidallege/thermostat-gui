@@ -22,10 +22,8 @@ function NavIcon() {
 
 function HiddenNavBar() {
   if (window.location.href === "http://localhost:3000/") {
-    console.log('Home')
     return ( false)
   } else {
-    console.log('Not in Kansas Anymore')
     return ( true )
   }
 }
