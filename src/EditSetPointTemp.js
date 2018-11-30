@@ -8,7 +8,7 @@ class EditSetPointTemp extends Component {
   constructor(props){
     super(props)
     this.state = {
-      desiredTemp: 30
+      desiredTemp: 55
     };
     this.goBack = this.goBack.bind(this);
     this.adjustTemperature = this.adjustTemperature.bind(this);
@@ -32,8 +32,8 @@ class EditSetPointTemp extends Component {
   }
   render() {
     return (
-      <div>
-        <div id="main-homepage">
+      <div id="component-wrapper">
+        <div id="main-settemp">
           <div id="hvac-control">
             <button id="hvac-button">Auto</button>
             <button id="hvac-button">Heat</button>
