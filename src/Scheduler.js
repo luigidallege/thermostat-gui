@@ -24,6 +24,7 @@ export class Scheduler extends Component {
     this.state = {
       showSetPoints: false,
       enableSetPoint: false,
+      setPointIsHidden: true,
       enableEditIsHidden: true,
       selectedSetPoint: '',
       selectedDay: ''
@@ -36,7 +37,7 @@ export class Scheduler extends Component {
 
   
   onDaySelectionClick(name) {
-    this.setState({ showSetPoints: true, selectedDay: name});
+    this.setState({ setPointIsHidden: false, selectedDay: name});
   } 
 
   onSetPointClick(name) {
@@ -57,7 +58,7 @@ export class Scheduler extends Component {
           <Button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekends')} style={{backgroundColor: this.state.selectedDay === "Weekends" ? "#FFCD00" : "#808080"}}>Weekends</Button>
         </div>
 
-        {this.state.showSetPoints ? null : <SetPoints selectedDay={this.state.selectedDay} onSetPointClick={this.onSetPointClick} selectedSetPoint={this.state.selectedSetPoint}/>}      
+        {this.state.setPointIsHidden ? null : <SetPoints selectedDay={this.state.selectedDay} onSetPointClick={this.onSetPointClick} selectedSetPoint={this.state.selectedSetPoint}/>}      
 
         {this.state.enableEditIsHidden ? null : <EnableEdit selectedDay={this.state.selectedDay} selectedSetPoint={this.state.selectedSetPoint} classes={classes} enableSetPoint={this.state.enableSetPoint} enableSetPointOnClick={this.enableSetPointOnClick}/>}
       </div>
@@ -66,22 +67,13 @@ export class Scheduler extends Component {
 }
 
 class SetPoints extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-
-    };
-  }
-
   render() {    
-    const { classes } = this.props;
-
     return(
       <div id="schedule-selecter-container" isHidden={this.state.showSetPoints}>
-        <Button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.state.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.state.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.state.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('4')} style={{backgroundColor: this.state.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.props.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.props.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.props.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
+        <Button class="button" onClick={() => this.props.onSetPointClick('4')} style={{backgroundColor: this.props.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</Button>
       </div>
     );
   }
