@@ -69,7 +69,7 @@ export class Scheduler extends Component {
 class SetPoints extends Component{
   render() {    
     return(
-      <div id="schedule-selecter-container" isHidden={this.state.showSetPoints}>
+      <div id="schedule-selecter-container">
         <Button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.props.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
         <Button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.props.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
         <Button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.props.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
