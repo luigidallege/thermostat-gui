@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import { UpArrow, DownArrow } from './Custom Icons/Arrows'
+import { UpArrow, DownArrow } from './Arrows'
 import { Typography } from '@material-ui/core'
 import { NavigatePages } from './NavigatePages'
 
