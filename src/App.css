@@ -31,6 +31,57 @@
   }
 }
 
+/* NavBar  */
+
+#toolbar-homepage{
+  background: #202020;
+  display: flex;
+  width: 100%;
+  height: 53px;
+  padding-top: 5px;
+  padding-left: 5px;
+} 
+
+#date-time{
+  flex: 50%;
+}  
+
+#nav{
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#date{
+  color: #FFCD00;
+  display: block;
+  margin-top: 5px;
+} 
+
+#time{
+  color: #FFF;
+  display: block;
+  margin-top: 5px;
+}
+
+.nav-btn{
+  background: #808080;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 3px 3px black;
+  color: white;
+}
+
+.nav-btn:hover{
+  outline: none;
+  border: none;
+  background: #FFCD00;
+}
+
 /* https://codepen.io/jpohlman/pen/RqeJGW */
 
 html, body{
@@ -76,7 +127,8 @@ button{
   height: 35px;
   border-radius: 100%;
   border: none;
-  box-shadow: 3px 3px;
+  box-shadow: 3px 3px black;
+  color: white;
 }
 
 button:hover{
@@ -125,38 +177,7 @@ button:active{
   border: none;
   background: #FFCD00;
 } 
-
-#toolbar-homepage{
-  background: #202020;
-  display: flex;
-  width: 100%;
-  height: 53px;
-  padding-top: 5px;
-  padding-left: 5px;
-} 
-
-#date-time{
-  flex: 50%;
-}  
-
-#nav{
-  flex: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-#date{
-  color: #FFCD00;
-  display: block;
-  margin-top: 5px;
-} 
-
-#time{
-  color: #FFF;
-  display: block;
-  margin-top: 5px;
-} 
+ 
   
 #main-homepage{
   display: flex;
@@ -287,7 +308,12 @@ button:active{
 
 /* Scheduler CSS */
 #main{
-  height: 70%;
+  height: 45%;
+} 
+
+#main-settemp{
+  display: flex;
+  height: 45%;
 } 
 
 #toolbar{
@@ -403,4 +429,8 @@ button:active{
   font-size: 16px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+#component-wrapper{
+  height: 100%;
 }
