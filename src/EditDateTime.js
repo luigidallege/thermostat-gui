@@ -24,13 +24,13 @@ export class EditDateTime extends Component{
   render() {   
 
     return(
-      <div id="component-wrapper">
-        <div id="main">
-          <Typography id="label">Select Time</Typography>
+      <div id="datetime-component-wrapper">
+        <div id="main-datetime">
+          <Typography id="datetime-label">Select Time</Typography>
           
           <SelectTime/>
 
-          <Typography id="label">Select Date</Typography>
+          <Typography id="datetime-label">Select Date</Typography>
           
           <SelectDate/>
         </div>
