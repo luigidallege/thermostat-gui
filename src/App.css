@@ -57,12 +57,16 @@
   color: #FFCD00;
   display: block;
   margin-top: 5px;
+  text-align: left;
+  margin-left: 5px;
 } 
 
 #time{
   color: #FFF;
   display: block;
   margin-top: 5px;
+  text-align: left;
+  margin-left: 5px;
 }
 
 #nav-btn{
@@ -141,14 +145,12 @@ button:focus{
   outline: none;
   border: none;
   background: #FFF;
-  color: #000
 }
 
 button:active{
   outline: none;
   border: none;
   background: #FFF;
-  color: #000
 } 
 
 #button{
@@ -206,7 +208,7 @@ button:active{
 #curr-temp{
   color: #FFF;
   font-size:125px;
-  line-height: 118%;
+  line-height: 110%;
   padding: 0;
   margin: 0;
 }
@@ -293,17 +295,17 @@ button:active{
 #arrow-up{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #FFCD00;
 }  
 
 #arrow-down{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #FFCD00;
 }
 
 /* Scheduler CSS */
@@ -317,10 +319,12 @@ button:active{
 } 
 
 #toolbar{
+  background: #000;
   display: flex;
   width: 100%;
-  height: auto;
-  padding: 15px;
+  height: 53px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 /* https://codepen.io/jpohlman/pen/LXgaOW */
@@ -427,10 +431,30 @@ button:active{
 #dial-text{
   color: white;
   font-size: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #component-wrapper{
   height: 100%;
 }
+
+#datetime-component-wrapper{
+  height: 100%;
+  position: relative;
+  top: -12%;
+}
+
+#datetime-label{
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+  color: white;
+}  
+
+  
+#main-datetime{
+  height:60%;
+} 

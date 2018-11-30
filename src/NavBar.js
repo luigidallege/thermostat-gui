@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 function NavIcon() {
-
-  if (window.location.href === "http://localhost:3001/") {
+  if (window.location.href === "http://localhost:3000/") {
     return (
       <Link to="/setpoints">
         <DateRange id="nav-btn" fontSize="large" />
@@ -21,22 +20,35 @@ function NavIcon() {
   }
 }
 
+function HiddenNavBar() {
+  if (window.location.href === "http://localhost:3000/") {
+    console.log('Home')
+    return ( false)
+  } else {
+    console.log('Not in Kansas Anymore')
+    return ( true )
+  }
+}
+
 class NavBar extends Component {
   render() {
-
+    let isHidden = HiddenNavBar()
     let navIcon = NavIcon();
     let time = moment();
 
+    console.log(isHidden)
+
     return (
       <AppBar position="static">
-        <Toolbar id="toolbar-homepage">
-          <div id="date-time">
-            <Typography id="time" align="left">{time.format("h:mm a")}</Typography>
-            <Typography id="date" align="left">{time.format("ddd, MMM Do")}</Typography>
+        <Toolbar id={isHidden ? 'toolbar' : 'toolbar-homepage'}>
+          <div id="date-time" isHidden={isHidden}>
+            {isHidden ? null : <DateTime/>}
           </div>
           <div id="nav">
             {navIcon}
-            <Settings id="nav-btn" fontSize="large" />
+            <Link to="/editdatetime">
+              <Settings id="nav-btn" fontSize="large"/>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
@@ -44,5 +56,12 @@ class NavBar extends Component {
   }
 
 }
+
+const DateTime = () => (
+  <div>
+    <Typography id="time">4:47 PM</Typography>
+    <Typography id="date">Wed, Nov. 7th</Typography>
+  </div>
+)
 
 export default NavBar

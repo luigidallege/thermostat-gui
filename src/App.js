@@ -10,6 +10,7 @@ import {
     Route
 } from 'react-router-dom'
 import Home from './Home';
+import EditDateTime from './EditDateTime';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/setpoints" component={Scheduler} />
             <Route path="/editsetpointtime" component={EditSetPointTime} />
             <Route path="/editsetpointtemp" component={EditSetPointTemp} />
+            <Route path="/editdatetime" component={EditDateTime} />
           </Switch>
       </div>
     );    
