@@ -21,10 +21,8 @@ function NavIcon() {
 
 function HiddenNavBar() {
   if (window.location.href === "http://localhost:3000/") {
-    console.log('Home')
     return ( false)
   } else {
-    console.log('Not in Kansas Anymore')
     return ( true )
   }
 }
@@ -33,8 +31,6 @@ class NavBar extends Component {
   render() {
     let isHidden = HiddenNavBar()
     let navIcon = NavIcon();
-
-    console.log(isHidden)
 
     return (
       <AppBar position="static">
