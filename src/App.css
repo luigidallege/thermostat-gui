@@ -291,17 +291,17 @@ button:active{
 #arrow-up{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #FFCD00;
 }  
 
 #arrow-down{
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #FFCD00;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #FFCD00;
 }
 
 /* Scheduler CSS */
@@ -425,10 +425,30 @@ button:active{
 #dial-text{
   color: white;
   font-size: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #component-wrapper{
   height: 100%;
 }
+
+#datetime-component-wrapper{
+  height: 100%;
+  position: relative;
+  top: -12%;
+}
+
+#datetime-label{
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+  color: white;
+}  
+
+  
+#main-datetime{
+  height:60%;
+} 
