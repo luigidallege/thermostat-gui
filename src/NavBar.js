@@ -1,26 +1,10 @@
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { DateRange, Settings } from '@material-ui/icons'
-import Scheduler from './Scheduler'
+import { Link } from 'react-router-dom'
 
 class NavBar extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      showCalendar: false
-    };
-    this.onCalendarClick = this.onCalendarClick.bind(this);
-  }
-
-  onCalendarClick = () => {
-    this.setState({ showCalendar: true});
-  }
-
   render(){
-    if(this.state.showCalendar){
-      return <Scheduler/>
-    }
-
     return(
       <AppBar position="static">
         <Toolbar id="toolbar-homepage">
@@ -29,8 +13,10 @@ class NavBar extends Component {
             <Typography id="date">Wed, Nov. 7th</Typography>
           </div>
           <div id="nav">
-            <DateRange fontSize="large" onClick={this.onCalendarClick}></DateRange>
-            <Settings fontSize="large" ></Settings>
+            <Link to="/setpoints">
+              <DateRange fontSize="large"/>
+            </Link>
+            <Settings fontSize="large"/>
           </div>
         </Toolbar>
       </AppBar>
