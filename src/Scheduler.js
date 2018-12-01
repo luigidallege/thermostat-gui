@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { withStyles } from '@material-ui/core/styles';
-import { Button, Switch, FormGroup, FormControlLabel } from '@material-ui/core';
+import { button, Switch, FormGroup, FormControlLabel } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
 const styles = theme => ({
@@ -54,8 +54,8 @@ export class Scheduler extends Component {
     return (
       <div id="main">
         <div id="schedule-selecter-container">
-          <Button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekdays')} style={{backgroundColor: this.state.selectedDay === "Weekdays" ? "#FFCD00" : "#808080"}}>Weekdays</Button>
-          <Button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekends')} style={{backgroundColor: this.state.selectedDay === "Weekends" ? "#FFCD00" : "#808080"}}>Weekends</Button>
+          <button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekdays')} style={{backgroundColor: this.state.selectedDay === "Weekdays" ? "#FFCD00" : "#808080"}}>Weekdays</button>
+          <button class="button schedule-btn" onClick={() => this.onDaySelectionClick('Weekends')} style={{backgroundColor: this.state.selectedDay === "Weekends" ? "#FFCD00" : "#808080"}}>Weekends</button>
         </div>
 
         {this.state.setPointIsHidden ? null : <SetPoints selectedDay={this.state.selectedDay} onSetPointClick={this.onSetPointClick} selectedSetPoint={this.state.selectedSetPoint}/>}      
@@ -70,10 +70,10 @@ class SetPoints extends Component{
   render() {    
     return(
       <div id="schedule-selecter-container">
-        <Button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.props.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.props.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.props.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</Button>
-        <Button class="button" onClick={() => this.props.onSetPointClick('4')} style={{backgroundColor: this.props.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</Button>
+        <button class="button" onClick={() => this.props.onSetPointClick('1')} style={{backgroundColor: this.props.selectedSetPoint === "1" ? "#FFCD00" : "#808080"}}>1</button>
+        <button class="button" onClick={() => this.props.onSetPointClick('2')} style={{backgroundColor: this.props.selectedSetPoint === "2" ? "#FFCD00" : "#808080"}}>2</button>
+        <button class="button" onClick={() => this.props.onSetPointClick('3')} style={{backgroundColor: this.props.selectedSetPoint === "3" ? "#FFCD00" : "#808080"}}>3</button>
+        <button class="button" onClick={() => this.props.onSetPointClick('4')} style={{backgroundColor: this.props.selectedSetPoint === "4" ? "#FFCD00" : "#808080"}}>4</button>
       </div>
     );
   }
@@ -114,9 +114,9 @@ class EnableEdit extends Component{
           />
         </FormGroup>
         
-        <Button class="button back-btn">
+        <button class="button back-btn">
           <Link to="/editsetpointtime" >EDIT</Link>
-        </Button>
+        </button>
        
       </div>
     );
