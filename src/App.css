@@ -86,6 +86,12 @@
   background: #FFCD00;
 }
 
+.nav-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 /* https://codepen.io/jpohlman/pen/RqeJGW */
 
 html, body{
@@ -125,7 +131,7 @@ p{
   color: #aaa;
 } 
   
-button{
+.button{
   background: #808080;
   width: 35px;
   height: 35px;
@@ -133,21 +139,26 @@ button{
   border: none;
   box-shadow: 3px 3px black;
   color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-button:hover{
+.button:hover{
   outline: none;
   border: none;
   background: #FFCD00;
 }
 
-button:focus{
+.button:focus{
   outline: none;
   border: none;
   background: #FFF;
 }
 
-button:active{
+.button:active{
   outline: none;
   border: none;
   background: #FFF;
@@ -160,6 +171,7 @@ button:active{
   border-radius: 100%;
   border: none;
   box-shadow: 3px 3px;
+  text-decoration: none;
 }
 
 #button:hover{
@@ -190,10 +202,10 @@ button:active{
   flex: 5%;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 5px;
 }  
 
-#hvac-button{
+.hvac-button{
   display: block;
   width: 40px;
   height: 40px;
@@ -282,7 +294,7 @@ button:active{
   margin: 0;
 }  
 
-#hold-btn{
+.hold-btn{
   color: #FFF;
   font-size: 12px;
   padding: 0;

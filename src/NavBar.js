@@ -6,15 +6,36 @@ import { Link } from 'react-router-dom'
 function NavIcon() {
   if (window.location.href === "http://localhost:3000/") {
     return (
-      <Link to="/setpoints">
-        <DateRange id="nav-btn" fontSize="large" />
-      </Link>
+      <div class="nav-container">
+        <Link to="/setpoints">
+          <DateRange id="nav-btn" fontSize="large" />
+        </Link>
+        <Link to="/editdatetime">
+          <Settings id="nav-btn" fontSize="large"/>
+        </Link>
+      </div>
+    )
+  } else if (window.location.href === "http://localhost:3000/editdatetime"){
+    return (
+      <div class="nav-container">
+        <Link to="/">
+          <Home id="nav-btn" fontSize="large" />
+        </Link>
+        <Link to="/setpoints">
+          <DateRange id="nav-btn" fontSize="large"/>
+        </Link>
+      </div>
     )
   } else {
     return (
-      <Link to="/">
-        <Home id="nav-btn" fontSize="large" />
-      </Link>
+      <div class="nav-container">
+        <Link to="/">
+          <Home id="nav-btn" fontSize="large" />
+        </Link>
+        <Link to="/editdatetime">
+          <Settings id="nav-btn" fontSize="large"/>
+        </Link>
+      </div>
     )
   }
 }
@@ -40,9 +61,6 @@ class NavBar extends Component {
           </div>
           <div id="nav">
             {navIcon}
-            <Link to="/editdatetime">
-              <Settings id="nav-btn" fontSize="large"/>
-            </Link>
           </div>
         </Toolbar>
       </AppBar>
