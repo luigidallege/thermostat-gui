@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-// var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-// var HeatLED = new Gpio(21, 'out'); //use GPIO pin 21, and specify that it is output
+var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
+var HeatLED = new Gpio(21, 'out'); //use GPIO pin 21, and specify that it is output
 
 class Home extends Component {
   constructor(props){
@@ -10,20 +10,20 @@ class Home extends Component {
     this.state = {
       heatStatus: 0
     };
-    // this.setHeat = this.setHeat.bind(this);
+    this.setHeat = this.setHeat.bind(this);
   }
 
-  // setHeat() { 
-  //   this.setState({heatStatus: 1});
-  //   HeatLED.writeSync(this.state.heatStatus); //turn LED on or off depending on the button state (0 or 1)
-  // }
+  setHeat() { 
+    this.setState({heatStatus: 1});
+    HeatLED.writeSync(this.state.heatStatus); //turn LED on or off depending on the button state (0 or 1)
+  }
 
   render() {
     return (
       <div id="main-homepage">
         <div id="hvac-control">
           <button class="button hvac-button">Auto</button>
-          <button class="button hvac-button" >Heat</button>
+          <button class="button hvac-button" onClick={this.setHeat}>Heat</button>
           <button class="button hvac-button">AC</button>
         </div>
         <div id="temp-container">
