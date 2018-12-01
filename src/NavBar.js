@@ -21,7 +21,7 @@ function NavIcon() {
 }
 
 function HiddenNavBar() {
-  if (window.location.href === "http://localhost:3000/") {
+  if (window.location.href === "https://thermostat-gui.herokuapp.com/") {
     return ( false )
   } else {
     return ( true )
@@ -39,7 +39,7 @@ function DateTime() {
 }
 
 class NavBar extends Component {
-
+  
   render() {
     let isHidden = HiddenNavBar()
     let navIcon = NavIcon();
