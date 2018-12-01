@@ -18,7 +18,7 @@ function NavIcon() {
       </Link>
     )
   }
-}
+}//
 
 function HiddenNavBar() {
   if (window.location.href === "https://thermostat-gui.herokuapp.com/") {
