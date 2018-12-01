@@ -15,7 +15,7 @@ class Home extends Component {
 
   setHeat() { 
     this.setState({heatStatus: 1});
-    HeatLED.writeSync(value); //turn LED on or off depending on the button state (0 or 1)
+    HeatLED.writeSync(this.state.heatStatus); //turn LED on or off depending on the button state (0 or 1)
   }
 
   render() {
