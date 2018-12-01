@@ -4,7 +4,7 @@ import { DateRange, Home, Settings } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 
 function NavIcon() {
-  if (window.location.href === "http://localhost:3000/") {
+  if (window.location.href === "http://ecehawks.herokuapp.com/") {
     return (
       <div class="nav-container">
         <Link to="/setpoints">
@@ -15,7 +15,7 @@ function NavIcon() {
         </Link>
       </div>
     )
-  } else if (window.location.href === "http://localhost:3000/editdatetime"){
+  } else if (window.location.href === "http://ecehawks.herokuapp.com/editdatetime"){
     return (
       <div class="nav-container">
         <Link to="/">
@@ -41,7 +41,7 @@ function NavIcon() {
 }
 
 function HiddenNavBar() {
-  if (window.location.href === "http://localhost:3000/") {
+  if (window.location.href === "http://ecehawks.herokuapp.com/") {
     return ( false)
   } else {
     return ( true )
