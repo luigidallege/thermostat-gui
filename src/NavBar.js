@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 function NavIcon() {
-  if (window.location.href === "http://localhost:3000/") {
+  if (window.location.href === "https://thermostat-gui.herokuapp.com/") {
     return (
       <Link to="/setpoints">
         <DateRange id="nav-btn" fontSize="large" />
@@ -39,7 +39,7 @@ function DateTime() {
 }
 
 class NavBar extends Component {
-  
+
   render() {
     let isHidden = HiddenNavBar()
     let navIcon = NavIcon();
