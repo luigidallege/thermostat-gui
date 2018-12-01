@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
 
+var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
+var HeatLED = new Gpio(21, 'out'); //use GPIO pin 4, and specify that it is output
+
 class Home extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      heatStatus: 0
+    };
+    this.setHeat = this.setHeat.bind(this);
+  }
+
+  setHeat() { 
+    this.setState({heatStatus: 1});
+    HeatLED.writeSync(value); //turn LED on or off depending on the button state (0 or 1)
+  }
+
   render() {
     return (
       <div id="main-homepage">
         <div id="hvac-control">
           <button id="hvac-button">Auto</button>
-          <button id="hvac-button">Heat</button>
+          <button id="hvac-button" onClick={this.setHeat}>Heat</button>
           <button id="hvac-button">AC</button>
         </div>
         <div id="temp-container">
