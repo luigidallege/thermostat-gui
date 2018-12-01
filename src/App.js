@@ -14,6 +14,7 @@ import EditDateTime from './EditDateTime';
 
 class App extends Component {
   render() {
+
     return (
       <div id="screen">
           <NavBar></NavBar>

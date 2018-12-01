@@ -22,7 +22,7 @@ function NavIcon() {
 
 function HiddenNavBar() {
   if (window.location.href === "http://localhost:3000/") {
-    return ( false)
+    return ( false )
   } else {
     return ( true )
   }
@@ -39,6 +39,7 @@ function DateTime() {
 }
 
 class NavBar extends Component {
+  
   render() {
     let isHidden = HiddenNavBar()
     let navIcon = NavIcon();
@@ -60,7 +61,6 @@ class NavBar extends Component {
       </AppBar>
     );
   }
-
 }
 
 export default NavBar

@@ -34,7 +34,7 @@ export class EditDateTime extends Component{
           
           <SelectDate/>
         </div>
-        <NavigatePages goBack={this.goBack} nextPage={'/'}/>
+        <NavigatePages goBack={this.goBack} nextPage={'/'} save_next={"SAVE"}/>
       </div>
     );
   }
