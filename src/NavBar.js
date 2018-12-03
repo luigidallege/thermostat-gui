@@ -3,10 +3,10 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { DateRange, Home, Settings } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 
-// http://ecehawks.herokuapp.com/
+//http://ecehawks.herokuapp.com/
 
 function NavIcon() {
-  if (window.location.href === "http://localhost:5000/") {
+  if (window.location.href === "http://localhost:3000/") {
     return (
       <div class="nav-container">
         <Link to="/setpoints">
@@ -17,7 +17,7 @@ function NavIcon() {
         </Link>
       </div>
     )
-  } else if (window.location.href === "http://localhost:5000/editdatetime"){
+  } else if (window.location.href === "http://localhost:3000/editdatetime"){
     return (
       <div class="nav-container">
         <Link to="/">
@@ -43,7 +43,7 @@ function NavIcon() {
 }
 
 function HiddenNavBar() {
-  if (window.location.href === "http://localhost:5000/") {
+  if (window.location.href === "http://localhost:3000/") {
     return ( false)
   } else {
     return ( true )
